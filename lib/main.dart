@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:basics/GradientContainer.dart';
+import 'package:flutter_first_app/gradient_container.dart';
 
 void main() {
   // MaterialApp() - Creates a widget
