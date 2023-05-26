@@ -6,37 +6,48 @@ void main() {
   // Use Scaffold to implement a basic style
   runApp(
     // const MaterialApp(
-    MaterialApp(
+    const MaterialApp(
       home: Scaffold(
-        // backgroundColor: Color.fromARGB(255, 159, 133, 202),
-        body: Container(
-          // Container does not support "const"
-          decoration: const BoxDecoration(
-            gradient: LinearGradient(
-              begin: Alignment.topCenter,
-              end: Alignment.bottomCenter,
-              colors: [
-                Color.fromARGB(255, 238, 255, 0),
-                Color.fromARGB(255, 255, 255, 255)
-              ],
-            ),
-          ),
-          child: Center(
-            child: RichText(
-              text: const TextSpan(
-                text: 'Hello World',
-                style: TextStyle(
-                  fontSize: 40,
-                  color: Colors.black,
-                  decoration: TextDecoration.underline,
-                  decorationColor: Colors.red,
-                  decorationStyle: TextDecorationStyle.wavy,
-                ),
-              ),
+        // Main container for GradientContainer method
+        body: GradientContainer(),
+      ),
+    ),
+  );
+}
+
+// 36 Working with constructors ??? review
+class GradientContainer extends StatelessWidget {
+  const GradientContainer({super.key});
+
+  // Return type widget
+  @override
+  Widget build(context) {
+    return Container(
+      // Container does not support "const"
+      decoration: const BoxDecoration(
+        gradient: LinearGradient(
+          begin: Alignment.topCenter,
+          end: Alignment.bottomCenter,
+          colors: [
+            Color.fromARGB(255, 94, 9, 143),
+            Color.fromARGB(255, 255, 255, 255)
+          ],
+        ),
+      ),
+      child: Center(
+        child: RichText(
+          text: const TextSpan(
+            text: 'Hello World',
+            style: TextStyle(
+              fontSize: 40,
+              color: Color.fromARGB(255, 44, 44, 44),
+              decoration: TextDecoration.underline,
+              decorationColor: Colors.red,
+              decorationStyle: TextDecorationStyle.wavy,
             ),
           ),
         ),
       ),
-    ),
-  );
+    );
+  }
 }
